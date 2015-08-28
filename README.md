@@ -11,6 +11,7 @@ De uitvoer van het script bestaat uit vier bestanden:
 * [un-draft-resolutions-neth.csv](https://github.com/FrieseWoudloper/un-draft-resolutions/blob/master/un-draft-resolutions-neth.csv) - Metadata van alle draft resoluties van Nederland
 * [un-draft-resolutions-neth-author-contributors.csv](https://github.com/FrieseWoudloper/un-draft-resolutions/blob/master/un-draft-resolutions-neth-author-contributors.csv) - Per draft resolutie de lidstaten die de resolutie hebben geschreven of er aan bijgedragen hebben
 * [un-draft-resolutions-neth-subjects.csv](https://github.com/FrieseWoudloper/un-draft-resolutions/blob/master/un-draft-resolutions-neth-subjects.csv) - Per draft resolutie de onderwerpen waar de resolutie betrekking op heeft
+
 Er is een 1-op-n relatie tussen enerzijds draft resolution en anderzijds author/contributors en subjects. Iedere draft resolutie heeft een uniek nummer: un_document_symbol. Dit nummer kun je gebruiken om de koppeling tussen de data in de verschillende bestanden te leggen.
 
 ## Vervolg
