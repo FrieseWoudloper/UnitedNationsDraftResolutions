@@ -15,4 +15,4 @@ De uitvoer van het script bestaat uit vier bestanden:
 Er is een 1-op-n relatie tussen enerzijds draft resolution en anderzijds author/contributors en subjects. Iedere draft resolutie heeft een uniek nummer: un_document_symbol. Dit nummer kun je gebruiken om de koppeling tussen de data in de verschillende bestanden te leggen.
 
 ## Vervolg
-Uiteindelijk wil ik graag de metadata van alle draft resolutions scrapen. Wat ook nog op mijn To Do lijstje staat, is om de werkende hyperlinks naar het PDF-bestanden met de inhoud van de draft resolutions toe te voegen. De links die ik nu heb opgenomen, werken alleen als je ze vanaf de website van de Verenigde Naties opvraagd.
+Uiteindelijk wil ik graag de metadata van alle draft resolutions scrapen. Wat ook nog op mijn To Do lijstje staat, is om de werkende hyperlinks naar het PDF-bestanden met de inhoud van de draft resolutions toe te voegen. De links die ik nu heb opgenomen, werken alleen als je ze vanaf de website van de Verenigde Naties opvraagt.
