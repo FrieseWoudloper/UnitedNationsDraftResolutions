@@ -1,6 +1,6 @@
 library(rvest)
 
-setwd("D:\temp\un-draft-resolutions")
+setwd("D:/temp/un-draft-resolutions")
 
 # List all member states
 url <- "http://www.un.org/depts/dhl/unms/cms.shtml"
