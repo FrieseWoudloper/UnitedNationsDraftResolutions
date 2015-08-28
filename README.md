@@ -1,12 +1,17 @@
-## Aanleiding
+## Achtergrond
 In de week van 17 tot en met 21 augustus vond op het Geofort bij Herwijnen het [Maptime Summercamp NL 2015](http://www.meetup.com/GeoForts-sideshow-diverse-activiteiten-op-het-fort/events/223911131/) plaats. Een groep van zo'n 12 enthousiaste geo-geeks kwam bijelkaar om samen met kaarten aan de slag te gaan. Eén van de onderwerpen was het onderzoek van [Sanne Blauw](https://twitter.com/sanneblauw) van De Correspondent naar [het taalgebruik van de Verenigde Naties](https://decorrespondent.nl/3140/Help-ons-zoeken-naar-de-stopwoordjes-van-de-Verenigde-Naties/582291968280-0d2f6f09). Ze vroeg hulp bij het visualiseren van patronen: Welke onderwerpen vinden bepaalde regio's belangrijk? Welke landen steunen elkaar door dik en dun? Hoe verandert dit in de tijd? Ze maakt hierbij gebruik van de gegevens in het [United Nations Bibliographic Information System (UNBISNET)](http://unbisnet.un.org:8080/ipac20/ipac.jsp?&menu=search&aspect=power&npp=50&ipp=20&spp=20&profile=bib&index=.TW&term=%22draft+resolution%22&index=.AW&term=Netherlands).
 
-## Scrapen van gegevens
-Ik heb geprobeerd om de gegevens van Nederland te achterhalen: Hoeveel resoluties zijn er door Nederland ingediend? Welke landen steunden Nederland bij het indienen? 
-Het ging me om de metadata, niet om de tekst van de resoluties.
-Het probleem is dat de metadata niet als open data beschikbaar wordt gesteld. De informatie is weliswaar openbaar en via het internet beschikbaar, maar niet in een gestructureerd formaat of via een API.
-In R heb ik een script gemaakt dat de zoekfunctionaliteit op de website gebruikt om de metadata van Nederlandse resoluties te scrapen. Het script [un-draft-resolutions.R](https://github.com/FrieseWoudloper/un-draft-resolutions/blob/master/un-draft-resolutions.R) en de uitvoer staan in deze GitHub-repository.
-Mijn doel is om de metadata van alle documenten van Nederland te scrapen en hieruit vervolgens de resoluties die zijn ingediend bij de Algemene Vergadering te filteren. Sanne heeft namelijk aangegeven dat ze hier in eerste instantie vooral in geïnteresseerd is.
+## Metadata van draft resoluties van Nederland
+Mijn insteek was om de metadata van de draft resoluties te verzamelen voor verdere analyse. Daarbij heb ik mij beperkt tot draft resoluties die door Nederland zijn geschreven of waaraan Nederland heeft bijgedragen. 
+De metadata is helaas niet in een gestructureerd formaat te downloaden of via een API eenvoudig op te vragen. Ik heb daarom in R een script geschreven dat de zoekfunctionaliteit op de website gebruikt om de metadata te scrapen. Het script [un-draft-resolutions.R](https://github.com/FrieseWoudloper/un-draft-resolutions/blob/master/un-draft-resolutions.R) en de uitvoer staan in deze GitHub-repository.
+
+## De uitvoer
+De uitvoer van het script bestaat uit vier bestanden:
+* un-member-status.csv - Een lijst met alle lidstaten van de VN 
+* un-draft-resolutions-neth.csv - Metadata van alle draft resoluties van Nederland
+* un-draft-resolutions-neth-author-contributors.csv - Per draft resolutie de lidstaten die de resolutie hebben geschreven of er aan bijgedragen hebben
+* un-draft-resolutions-neth-subjects.csv - Per draft resolutie de onderwerpen waar de resolutie betrekking op heeft
+Er is een 1-op-n relatie tussen enerzijds draft resolution en anderzijds author/contributors en subjects. Iedere draft resolutie heeft een uniek nummer: un_document_symbol. Dit nummer kun je gebruiken om de koppeling tussen de data in de verschillende bestanden te leggen.
 
 ## Het vervolg
-Uiteindelijk wil ik graag de metadata van alle draft resolutions scrapen. Wat ook nog op mijn TO DO lijstje staat, is om de werkende hyperlinks naar het PDF-bestanden met de inhoud van de draft resolutions toe te voegen. De links die ik nu heb opgenomen, werken alleen als je ze vanaf de website van de Verengide Naties opvraagd.
+Uiteindelijk wil ik graag de metadata van alle draft resolutions scrapen. Wat ook nog op mijn TO DO lijstje staat, is om de werkende hyperlinks naar het PDF-bestanden met de inhoud van de draft resolutions toe te voegen. De links die ik nu heb opgenomen, werken alleen als je ze vanaf de website van de Verenigde Naties opvraagd.
