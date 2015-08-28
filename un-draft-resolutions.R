@@ -1,6 +1,6 @@
 library(rvest)
 
-setwd("d:/temp/maptime")
+setwd("D:\temp\un-draft-resolutions")
 
 # List all member states
 url <- "http://www.un.org/depts/dhl/unms/cms.shtml"
@@ -114,5 +114,5 @@ colnames(subjects) <- c("un_document_symbol", "subject")
 
 # Save output in CSV-files
 write.csv(draft_resolutions, "un-draft-resolutions-neth.csv", row.names = FALSE)
-write.csv(data.frame(un_document_symbol, author_contributors), "un-draft-resolutions-neth-author-contributors.csv", row.names = FALSE)
-write.csv(data.frame(un_document_symbol, subjects), "un-draft-resolutions-neth-subjects.csv", row.names = FALSE)
+write.csv(data.frame(author_contributors), "un-draft-resolutions-neth-author-contributors.csv", row.names = FALSE)
+write.csv(data.frame(subjects), "un-draft-resolutions-neth-subjects.csv", row.names = FALSE)
